@@ -26,7 +26,8 @@ function App() {
         <section id="home">
           <h1>Coming Soon...</h1>
           <h2>Like Instacart and Instagram had a baby 🤰🏼</h2>
-          <form name="signup" data-netlify="true" netlify>
+          <form name="signup" method="post">
+            <input type="hidden" name="form-name" value="signup" />
             <label htmlFor="email">Join our waitlist</label><br />
             <input type="email" id="email" name="email" placeholder="Your email address" required /><br />
             <button type="submit">Subscribe</button>
