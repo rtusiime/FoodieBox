@@ -1,6 +1,9 @@
 html, body {
   height: 100%;
   margin: 0;
+  font-family: 'Lato', sans-serif; /* Updated to Lato for a more modern look */
+  background-color: #fff; /* Pure white for a clean look */
+  color: #333; /* Keeping text readable */
 }
 
 .App {
@@ -9,62 +12,128 @@ html, body {
   min-height: 100vh;
 }
 
+h1, h2 {
+  text-align: center;
+  margin-top: 0.5em;
+}
+
 h1 {
-  font-size: 5em;
-  margin: auto;
+  font-size: 3.5em;
+  color: #2a9d8f; /* A pleasing teal for primary headers */
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2.5em;
+  color: #264653; /* Dark blue for secondary headers */
 }
 
 .App-header {
-  background-color: black;
-  padding: 20px 0;
+  background-color: #264653; /* Consistent with secondary headers */
+  padding: 1em;
   color: white;
-  text-align: center;
+  display: flex;
+  align-items: flex-end; /* Align items at the end of the container vertically */
 }
 
-.App-header img {
-  height: 200px;
+.App-header nav {
+  flex: 1;
 }
 
 .App-header ul {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* This will center the nav items if there's extra space */
   gap: 20px;
+  padding: 0; /* Reset default padding */
+  margin: 0; /* Aligning with the bottom by removing default margin */
+}
+
+.App-header ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold; /* Making the navigation text stand out */
+  transition: color 0.3s ease;
+}
+
+.App-header img {
+  height: 120px;
+  margin-right: 1em; /* Adds some spacing between logo and nav */
+}
+
+.App-header ul li a:hover {
+  color: #2a9d8f; /* Hover effect matches the primary color */
 }
 
 main {
   padding: 20px;
-  text-align: center;
   flex: 1;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid for features */
+  gap: 20px;
+  text-align: center;
+}
+
+.feature {
+  background-color: #e9f0f3; /* Soft background color for feature cards */
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-out; /* Smooth scaling on hover */
+}
+
+.feature:hover {
+  transform: scale(1.05); /* Slight increase in size on hover for attention */
+}
+
+iframe {
+  width: 560px;
+  max-width: 100%; /* Ensure video is responsive */
+}
+
+#demo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 form {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-input[type="email"], button {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ddd;
+input[type="email"], textarea {
+  width: calc(100% - 20px);
+  border: 1px solid #ccc;
   border-radius: 5px;
+  padding: 10px;
 }
 
 button {
-  background-color: #ff9800;
+  background-color: #2a9d8f; /* Consistent with primary header */
   color: white;
   border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
 }
 
 footer {
-  background-color: black;
+  background-color: #264653;
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .App-header ul {
+    flex-direction: column;
+  }
 }
