@@ -27,20 +27,15 @@ h2 {
   color: #264653; /* Dark blue for secondary headers */
 }
 
-.App-header {
-  background-color: #264653; /* Consistent with secondary headers */
-  padding: 1em;
-  color: white;
-  display: flex;
-  align-items: flex-end; /* Align items at the end of the container vertically */
-}
-
 .App-header nav {
   flex: 1;
 }
 
-p {
-  text-align: center;
+.App-header {
+  background-color: #264653; /* Consistent with secondary headers */
+  padding: 1em;
+  color: white;
+  display: grid;
 }
 
 .App-header ul {
@@ -49,7 +44,10 @@ p {
   gap: 50px;
   padding: 0; /* Reset default padding */
   margin: 0; /* Aligning with the bottom by removing default margin */
-  left: 20%; /* Adjusting the position of the nav */
+}
+
+p {
+  text-align: center;
 }
 
 .App-header ul li a {
@@ -139,6 +137,6 @@ footer {
   }
 
   .App-header ul {
-    flex-direction: column;
+    flex-direction: row; /* Keep it row on smaller screens or column if you want to stack items */
   }
 }
