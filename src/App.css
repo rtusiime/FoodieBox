@@ -1,6 +1,6 @@
 html, body {
   height: 100%;
-  margin: 0;
+  margin: auto;
   font-family: 'Lato', sans-serif; /* Updated to Lato for a more modern look */
   background-color: #fff; /* Pure white for a clean look */
   color: #333; /* Keeping text readable */
@@ -39,12 +39,17 @@ h2 {
   flex: 1;
 }
 
+p {
+  text-align: center;
+}
+
 .App-header ul {
   display: flex;
   justify-content: center; /* This will center the nav items if there's extra space */
-  gap: 20px;
+  gap: 50px;
   padding: 0; /* Reset default padding */
   margin: 0; /* Aligning with the bottom by removing default margin */
+  left: 20%; /* Adjusting the position of the nav */
 }
 
 .App-header ul li a {
@@ -105,7 +110,7 @@ form {
 }
 
 input[type="email"], textarea {
-  width: calc(100% - 20px);
+  width: 300px;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
